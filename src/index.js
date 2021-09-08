@@ -1,11 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import ReactDom from 'react-dom';
 import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const AppList = () => {
+  return (
+    <>
+      <ul>
+        <li>My First Element</li>
+        <li>My Second Element</li>
+      </ul>
+    </>
+  );
+};
+
+const AppHeader = () => {
+  return <h1>Hello World 2</h1>;
+};
+
+const App2 = () => {
+  return (
+    <>
+      <AppHeader />
+      <AppList />
+    </>
+  );
+};
+
+ReactDom.render(<App2 />, document.getElementById('root'));
