@@ -5,7 +5,6 @@ const Layout = ({ title = 'title', descr = 'descr', urlBg, colorBg = '#e2e2e2' }
   const layoutStyle = {
     background: urlBg ? `url("${urlBg}") center no-repeat` : colorBg,
   };
-  console.log();
   return (
     <section className={s.root} style={layoutStyle}>
       <div className={s.wrapper}>
