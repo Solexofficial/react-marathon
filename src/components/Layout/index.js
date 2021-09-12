@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './layout.module.css';
+import s from './style.module.css';
 
-const Layout = ({ title = 'title', descr = 'descr', urlBg, colorBg = '#e2e2e2' }) => {
+const Layout = ({ title = 'title', descr = 'descr', urlBg, colorBg = '#e2e2e2', children }) => {
   const layoutStyle = {
     background: urlBg ? `url("${urlBg}") center no-repeat` : colorBg,
   };
@@ -17,6 +17,7 @@ const Layout = ({ title = 'title', descr = 'descr', urlBg, colorBg = '#e2e2e2' }
             <p>{descr}</p>
           </div>
         </article>
+        {children}
       </div>
     </section>
   );
